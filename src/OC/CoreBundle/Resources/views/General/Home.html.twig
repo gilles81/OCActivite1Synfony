@@ -7,14 +7,20 @@
 {% endblock %}
 
 {% block MainContent %}
-
   {% for advert in listAdverts %}
-    <h2>{{ advert.title }}</h2>
+    <h2>{{ advert.title }}--------</h2>
     <i>Par {{ advert.author }}, le {{ advert.date|date('d/m/Y') }}</i>
-
     <div class="well">
       {{ advert.content }}
     </div>
       {% endfor %}
+{% endblock %}
+
+{% block message_body %}
+ <p>Message flash </p>
+{# On affiche tous les messages flash dont le nom est « info » #}
+     {% for message in app.session.flashbag.get('info') %}
+       <p class="alert alert-danger"> Message flash : {{ message }}</p>
+     {% endfor %}
 
 {% endblock %}
