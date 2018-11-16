@@ -1,0 +1,20 @@
+{# src/OC/CoreBundle/Resources/view/General/Home.html.twig #}
+
+{% extends "OCCoreBundle::LayoutGeneral.html.twig" %}
+
+{% block title %}
+  Page d'accueuil - {{ parent() }}
+{% endblock %}
+
+{% block MainContent %}
+
+  {% for advert in listAdverts %}
+    <h2>{{ advert.title }}</h2>
+    <i>Par {{ advert.author }}, le {{ advert.date|date('d/m/Y') }}</i>
+
+    <div class="well">
+      {{ advert.content }}
+    </div>
+      {% endfor %}
+
+{% endblock %}

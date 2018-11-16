@@ -1,0 +1,25 @@
+{# src/OC/CoreBundle/Resources/views/layoutHome.html.twig #}
+
+{% extends "OCCoreBundle::Layout.html.twig" %}
+
+{% block title %}
+Bienvenue  - {{ parent() }}
+{% endblock %}
+
+{% block body %}
+
+  {# On définit un sous-titre commun à toutes les pages de la partie generale  #}
+
+  <h1>Bienvenue sur notre site d'annonces </h1>
+
+  {% block MainContent %}
+  {% endblock %}
+
+  <hr>
+
+  {# On définit un nouveau bloc, que les vues du bundle pourront remplir #}
+  {% block ochome_body %}
+  <p> bla bla </P>
+  {% endblock %}
+
+{% endblock %}

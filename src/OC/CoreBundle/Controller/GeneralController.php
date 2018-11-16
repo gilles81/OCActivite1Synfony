@@ -31,8 +31,14 @@ class GeneralController extends Controller
           'content' => 'Nous proposons un poste pour webdesigner. Blabla…',
           'date'    => new \Datetime())
       );
-        return $this->render('OCCoreBundle:Home:Home.html.twig',array(
+        return $this->render('OCCoreBundle:General:Home.html.twig',array(
           'listAdverts' => $listAdverts,
         ));
     }
+
+    public function ContactAction()
+    {
+      return $this->render('OCCoreBundle:General:Contact.html.twig');
+    }
+
 }

@@ -2,5 +2,5 @@ oc_homepage:
     path:     /
     defaults: { _controller: OCCoreBundle:General:index }
 oc_contact:
-    path:     /
-    defaults: { _controller: OCCoreBundle:General:index }
+    path:     /Contact
+    defaults: { _controller: OCCoreBundle:General:Contact }
