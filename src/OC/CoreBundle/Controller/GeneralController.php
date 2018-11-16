@@ -45,12 +45,9 @@ class GeneralController extends Controller
       // Bien sûr, cette méthode devra réellement ajouter l'annonce
 
       // Mais faisons comme si c'était le cas
-      $session->getFlashBag()->add('info', 'Annonce bien enregistrée');
+      $session->getFlashBag()->add('info', 'La page de contact n’est pas encore disponible');
 
-      // Le « flashBag » est ce qui contient les messages flash dans la session
-      // Il peut bien sûr contenir plusieurs messages :
-      $session->getFlashBag()->add('info', 'Oui oui, elle est bien enregistrée !');
-
+      
       // Puis on redirige vers la page de visualisation de cette annonce
       return $this->redirectToRoute('oc_homepage' );
 
